@@ -1,0 +1,10 @@
+# go build -o main .
+CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+cp /etc/ssl/certs/ca-certificates.crt .
+
+docker build -t example-scratch -f Dockerfile.scratch .
+
+docker run -it example-scratch
+
+

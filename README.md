@@ -10,6 +10,9 @@ for learning
     # faster fix
     sudo chmod 666 /var/run/docker.sock
 
+    systemctl enable/disable docker
+    systemctl start/stop docker
+
 # ------------------------------------------------------------------------------
 # comands
     docker-compose up -d
@@ -22,6 +25,8 @@ for learning
     docker system prune # remove all
 
     docker images -a
+    docker rmi <id>
     docker images purge
     docker volume ls
     docker volume rm <volume> <volume>
+
